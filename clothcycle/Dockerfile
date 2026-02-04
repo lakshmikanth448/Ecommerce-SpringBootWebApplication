@@ -4,8 +4,8 @@ RUN apt-get update && apt-get install -y maven
 
 WORKDIR /
 
-COPY pom.xml .
-COPY src ./src
+COPY clothcycle/pom.xml .
+COPY clothcycle/src .clothcycle/src
 
 RUN mvn clean package -DskipTests
 
