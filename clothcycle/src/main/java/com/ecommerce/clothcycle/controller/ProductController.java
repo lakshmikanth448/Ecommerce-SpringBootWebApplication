@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = "https://fastidious-unicorn-c116bb.netlify.app")
+@CrossOrigin(origins = "https://reliable-pasca-f76343.netlify.app")
 @RequestMapping("/api")
 public class ProductController {
 
@@ -90,4 +90,5 @@ public class ProductController {
     }
 
 }
+
 
