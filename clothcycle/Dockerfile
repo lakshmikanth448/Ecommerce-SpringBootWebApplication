@@ -2,10 +2,10 @@ FROM eclipse-temurin:17-jdk
 
 RUN apt-get update && apt-get install -y maven
 
-WORKDIR /clothcycle
+WORKDIR /app
 
 COPY pom.xml .
-COPY src .clothcycle/src
+COPY src ./src
 
 RUN mvn clean package -DskipTests
 
