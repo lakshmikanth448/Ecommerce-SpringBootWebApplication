@@ -1,3 +1,5 @@
+
+
 FROM eclipse-temurin:17-jdk
 
 RUN apt-get update && apt-get install -y maven
@@ -8,6 +10,9 @@ COPY clothcycle/pom.xml .
 COPY clothcycle/src .clothcycle/src
 
 RUN mvn clean package -DskipTests
+
+FROM eclipse-temurin:17-jdk
+WORKDIR /
 
 EXPOSE 8080
 
