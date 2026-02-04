@@ -1,25 +1,17 @@
-# Use official Java image
+# Use Java 17 (recommended for Spring Boot)
 FROM eclipse-temurin:17-jdk
 
-# Set working directory
+# Set working directory inside container
 WORKDIR /app
 
-# Copy Maven wrapper and pom
-COPY mvnw .
-COPY .mvn .mvn
-COPY pom.xml .
+# Copy all project files into container
+COPY . .
 
-# Download dependencies
-RUN ./mvnw dependency:go-offline
-
-# Copy source code
-COPY src clothcycle/src
-
-# Build the application
+# Build the Spring Boot application
 RUN ./mvnw clean package -DskipTests
 
-# Expose port
+# Expose Spring Boot default port
 EXPOSE 8080
 
-# Run the app
+# Run the generated JAR file
 CMD ["java", "-jar", "target/*.jar"]
