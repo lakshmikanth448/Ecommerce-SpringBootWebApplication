@@ -1,17 +1,20 @@
-# Use Java 17 (recommended for Spring Boot)
+# Java 17 base image
 FROM eclipse-temurin:17-jdk
 
-# Set working directory inside container
+# Install Maven
+RUN apt-get update && apt-get install -y maven
+
+# Set working directory
 WORKDIR /app
 
-# Copy all project files into container
+# Copy project files
 COPY . .
 
-# Build the Spring Boot application
-RUN ./mvnw clean package -DskipTests
+# Build the application
+RUN mvn clean package -DskipTests
 
-# Expose Spring Boot default port
+# Expose port
 EXPOSE 8080
 
-# Run the generated JAR file
+# Run Spring Boot jar
 CMD ["java", "-jar", "target/*.jar"]
