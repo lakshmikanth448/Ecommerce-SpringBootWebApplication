@@ -1,20 +1,20 @@
-# Java 17 base image
+# Java 17
 FROM eclipse-temurin:17-jdk
 
 # Install Maven
 RUN apt-get update && apt-get install -y maven
 
-# Set working directory
-WORKDIR /app
+# Set working directory to project root
+WORKDIR /clothcycle
 
-# Copy project files
+# Copy everything from clothcycle folder
 COPY . .
 
-# Build the application
+# Build Spring Boot app
 RUN mvn clean package -DskipTests
 
-# Expose port
+# Expose Spring Boot port
 EXPOSE 8080
 
-# Run Spring Boot jar
+# Run the generated jar
 CMD ["java", "-jar", "target/*.jar"]
