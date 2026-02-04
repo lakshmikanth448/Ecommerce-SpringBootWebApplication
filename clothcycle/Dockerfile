@@ -5,7 +5,7 @@ FROM eclipse-temurin:17-jdk
 RUN apt-get update && apt-get install -y maven
 
 # Set working directory to project root
-WORKDIR /Ecommerce-SpringBootWebApplication
+WORKDIR /Ecommerce-SpringBootWebApplication/clothcycle
 
 # Copy everything from clothcycle folder
 COPY . .
