@@ -77,12 +77,11 @@
 
     <build>
         <plugins>
-                 <plugin>
+                <plugin>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-maven-plugin</artifactId>
-            <version>4.0.1</version>
             <configuration>
-                <mainClass>com.clothcycle.ClothcycleApplication</mainClass>
+                <mainClass>com.ecommerce.clothcycle.ClothcycleApplication</mainClass>
             </configuration>
         </plugin>
             <plugin>
