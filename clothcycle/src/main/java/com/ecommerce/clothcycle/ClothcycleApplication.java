@@ -1,4 +1,4 @@
-package com.clothcycle;
+package com.ecommerce.clothcycle;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
