@@ -13,7 +13,7 @@ COPY pom.xml .
 RUN ./mvnw dependency:go-offline
 
 # Copy source code
-COPY src src
+COPY src clothcycle/src
 
 # Build the application
 RUN ./mvnw clean package -DskipTests
