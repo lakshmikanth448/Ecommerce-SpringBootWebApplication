@@ -77,6 +77,15 @@
 
     <build>
         <plugins>
+                 <plugin>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-maven-plugin</artifactId>
+    <version>3.2.2</version>
+    <configuration>
+        <mainClass>com.ecommerce.clothcycle.ClothcycleApplication</mainClass>
+    </configuration>
+</plugin>
+
                 <plugin>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-maven-plugin</artifactId>
